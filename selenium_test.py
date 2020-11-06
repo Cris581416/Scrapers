@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from os import path
 import time
 
-driver_path = path.join(path.dirname(__file__), "chromedriver")
+driver_path = path.join(path.dirname(path.abspath(__file__)), "chromedriver")
 driver = webdriver.Chrome(driver_path)
 
 driver.get("https://www.redfin.com")
