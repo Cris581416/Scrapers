@@ -1,0 +1,54 @@
+{
+    "houses": {
+        "1829 Harding St": {
+            "location": "$549,900",
+            "price": "3",
+            "beds": "1"
+        },
+        "1540 Mescal St": {
+            "location": "$600,000",
+            "price": "3",
+            "beds": "2"
+        },
+        "1785 Mendocino St": {
+            "location": "$559,800",
+            "price": "3",
+            "beds": "1.5"
+        },
+        "1744 Kenneth St": {
+            "location": "$575,000",
+            "price": "3",
+            "beds": "1"
+        },
+        "1752 Flores St": {
+            "location": "$493,750",
+            "price": "3",
+            "beds": "1.5"
+        },
+        "1193 Phoenix Ave": {
+            "location": "$535,000",
+            "price": "2",
+            "beds": "1"
+        },
+        "1868 Lowell St": {
+            "location": "$589,500",
+            "price": "3",
+            "beds": "1"
+        },
+        "1146 Birch Ave #21": {
+            "location": "$180,000",
+            "price": "1",
+            "beds": "1"
+        },
+        "1146 Birch Ave #34": {
+            "location": "$250,000",
+            "price": "2",
+            "beds": "2"
+        },
+        "1146 Birch Ave #90": {
+            "location": "$299,000",
+            "price": "2",
+            "beds": "2"
+        }
+    }
+}
