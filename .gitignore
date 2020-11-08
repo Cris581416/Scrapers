@@ -1,3 +1,4 @@
 *.exe
 chromedriver
 .DS_Store
+chromium-browser
