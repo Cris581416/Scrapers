@@ -30,7 +30,7 @@ table_mode = driver.find_element_by_xpath("/html/body/div[1]/div[6]/div[2]/div[1
 
 time.sleep(1)
 
-info_format = ["location", "price", "beds", "baths"]
+info_format = ["price", "beds", "baths"]
 property_dict = {}
 property_table = driver.find_element_by_css_selector("tbody")
 for row_num, row in enumerate(property_table.find_elements_by_tag_name("tr")):
@@ -46,10 +46,13 @@ with open('houses.json', 'r') as file:
 
 for property in property_dict:
     if property in listed_props["houses"]:
-        print("House already in property_dict")
+        print("House already in property_dict!")
+        if property_dict[property] != listed_props["houses"][property]:
+            print(f"Updated {property}!")
+            listed_props["houses"][property] = property_dict[property]
         continue
 
-    print(f"New Property: {property}")
+    print(f"New Property: {property}!")
     listed_props["houses"][property] = property_dict[property]
 
 with open('houses.json', 'w') as file:

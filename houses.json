@@ -1,54 +1,54 @@
 {
     "houses": {
         "1829 Harding St": {
-            "location": "$549,900",
-            "price": "3",
-            "beds": "1"
+            "price": "$549,900",
+            "beds": "3",
+            "baths": "1"
         },
         "1540 Mescal St": {
-            "location": "$600,000",
-            "price": "3",
-            "beds": "2"
+            "price": "$600,000",
+            "beds": "3",
+            "baths": "2"
         },
         "1785 Mendocino St": {
-            "location": "$559,800",
-            "price": "3",
-            "beds": "1.5"
+            "price": "$559,800",
+            "beds": "3",
+            "baths": "1.5"
         },
         "1744 Kenneth St": {
-            "location": "$575,000",
-            "price": "3",
-            "beds": "1"
+            "price": "$575,000",
+            "beds": "3",
+            "baths": "1"
         },
         "1752 Flores St": {
-            "location": "$493,750",
-            "price": "3",
-            "beds": "1.5"
+            "price": "$493,750",
+            "beds": "3",
+            "baths": "1.5"
         },
         "1193 Phoenix Ave": {
-            "location": "$535,000",
-            "price": "2",
-            "beds": "1"
+            "price": "$535,000",
+            "beds": "2",
+            "baths": "1"
         },
         "1868 Lowell St": {
-            "location": "$589,500",
-            "price": "3",
-            "beds": "1"
+            "price": "$589,500",
+            "beds": "3",
+            "baths": "1"
         },
         "1146 Birch Ave #21": {
-            "location": "$180,000",
-            "price": "1",
-            "beds": "1"
+            "price": "$180,000",
+            "beds": "1",
+            "baths": "1"
         },
         "1146 Birch Ave #34": {
-            "location": "$250,000",
-            "price": "2",
-            "beds": "2"
+            "price": "$250,000",
+            "beds": "2",
+            "baths": "2"
         },
         "1146 Birch Ave #90": {
-            "location": "$299,000",
-            "price": "2",
-            "beds": "2"
+            "price": "$299,000",
+            "beds": "2",
+            "baths": "2"
         }
     }
 }
