@@ -4,7 +4,7 @@ from os import path
 import json
 import time
 
-driver_path = path.join(path.dirname(path.dirname(path.abspath(__file__))), "chromedriver")
+driver_path = "/usr/lib/chromium-browser/chromedriver"
 driver = webdriver.Chrome(driver_path)
 
 driver.get("https://www.redfin.com")
