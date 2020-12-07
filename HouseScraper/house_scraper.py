@@ -54,6 +54,10 @@ for property in property_dict:
 
     print(f"New Property: {property}!")
     listed_props["houses"][property] = property_dict[property]
+    
+listed_props["counter"] += 1
+counter = listed_props["counter"]
+print(f"Number of times script has been run: {counter}!")
 
 with open('houses.json', 'w') as file:
     json.dump(listed_props, file, indent=4)
