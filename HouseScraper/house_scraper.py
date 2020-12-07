@@ -5,7 +5,11 @@ import json
 import time
 
 driver_path = "/usr/bin/chromedriver"
+options = webdriver.ChromeOptions()
+options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(driver_path)
+
+houses_json = "/home/pi/Documents/MyCodeFolder/PythonFolder/Scrapers/HouseScraper/houses.json"
 
 driver.get("https://www.redfin.com")
 print(driver.title)
@@ -41,7 +45,7 @@ for row_num, row in enumerate(property_table.find_elements_by_tag_name("tr")):
         property_dict[key][info_format[element_num]] = element.text
     print(property_dict[key])
 
-with open('houses.json', 'r') as file:
+with open(houses_json, 'r') as file:
     listed_props = json.load(file)
 
 for property in property_dict:
@@ -59,7 +63,7 @@ listed_props["counter"] += 1
 counter = listed_props["counter"]
 print(f"Number of times script has been run: {counter}!")
 
-with open('houses.json', 'w') as file:
+with open(houses_json, 'w') as file:
     json.dump(listed_props, file, indent=4)
 
 driver.close()
