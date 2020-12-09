@@ -56,5 +56,6 @@
             "baths": "1"
         }
     },
-    "counter": 2
+    "counter": 11,
+    "led": false
 }

@@ -58,6 +58,7 @@ for property in property_dict:
 
     print(f"New Property: {property}!")
     listed_props["houses"][property] = property_dict[property]
+    listed_props["led"] = True
     
 listed_props["counter"] += 1
 counter = listed_props["counter"]
