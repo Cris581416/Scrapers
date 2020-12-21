@@ -54,8 +54,13 @@
             "price": "$137,500",
             "beds": "1",
             "baths": "1"
+        },
+        "1767 Hilton St": {
+            "price": "$400,000",
+            "beds": "3",
+            "baths": "1.5"
         }
     },
-    "counter": 11,
+    "counter": 20,
     "led": false
 }
