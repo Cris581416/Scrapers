@@ -3,3 +3,5 @@ chromedriver
 .DS_Store
 chromium-browser
 HouseScraper/hs.log
+HouseScraper/.vscode
+
