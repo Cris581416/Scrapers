@@ -66,6 +66,7 @@ def main():
                     courses[senders.get_course(sender)] += 1
             message_num += 1
             messages.modify(userId="me", id=message_obj["id"], body={"removeLabelIds": ["UNREAD"]}).execute()
+            courses["Main_Controller"] = True
 
     with open("senders.json", "w") as file:
         json.dump(courses, file, indent=4)
