@@ -63,7 +63,6 @@ void getSubstrings(String messages){
 }
 
 void alternateScreen(){
-  Serial.println("Alternating!");
   delay(100);
   lcd.setCursor(0, 0);
   lcd.print(substring1);
@@ -114,15 +113,12 @@ void loop() {
   while(Serial.available()){
     clearScreen();
     message = Serial.readString();
-    Serial.println("Original: " + message);
     //message.remove(message.length()- 1, 2);
     message.trim();
     message.replace(',', ' ');
     if(message.length() > 16){
       message = parseMessage(message);
-      Serial.println("Parsed Message: " + message);
       getSubstrings(message);
-      Serial.println(alternate);
       if(!alternate){
         lcd.print(substring1);
         lcd.setCursor(0, 1);
