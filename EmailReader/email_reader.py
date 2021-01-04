@@ -6,11 +6,17 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import json
 import senders
+import serial
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
 def main():
+    ser = serial.Serial(port="COM3", timeout=1)
+    ser.flush()
+
+
+
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
     """
@@ -49,7 +55,7 @@ def main():
     # User properties
     messages = service.users().messages()
 
-    results = messages.list(userId="me", labelIds=["INBOX"], maxResults=10).execute()["messages"]
+    results = messages.list(userId="me", labelIds=["INBOX"], maxResults=20).execute()["messages"]
     message_num = 1
 
     with open("senders.json", "r") as file:
@@ -67,6 +73,15 @@ def main():
             message_num += 1
             messages.modify(userId="me", id=message_obj["id"], body={"removeLabelIds": ["UNREAD"]}).execute()
             courses["Main_Controller"] = True
+
+    serial_message = ""
+
+    for course in courses:
+        email_num = courses[course]
+        if course != "Main_Controller" and email_num > 0:
+            serial_message += f"{course[0:2]}:{email_num} "
+    
+    ser.write(serial_message.encode('utf-8'))
 
     with open("senders.json", "w") as file:
         json.dump(courses, file, indent=4)
