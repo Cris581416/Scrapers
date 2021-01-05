@@ -12,7 +12,7 @@ import serial
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 
 def main():
-    ser = serial.Serial(port="/dev/ttyACM0", timeout=1)
+    ser = serial.Serial(port="COM3", timeout=1)
     ser.flush()
 
 
