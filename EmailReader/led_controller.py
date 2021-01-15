@@ -2,6 +2,7 @@ from gpiozero import Button
 from gpiozero import LED
 import json
 import time
+import serial
 
 print("LED Controller starting!")
 senders_json = "/home/pi/Documents/MyCodeFolder/PythonFolder/Scrapers/EmailReader/senders.json"
@@ -18,6 +19,9 @@ off_button = Button(6)
 time_limit = (60 + 55) * 60
 start_time = time.time()
 
+ser = serial.Serial(port="/dev/ttyACM0", timeout=1)
+ser.flush()
+
 with open(senders_json, "r") as file:
     senders = json.load(file)
     
@@ -30,7 +34,6 @@ for led in leds:
 
 while senders["Main_Controller"] and time.time() - start_time < time_limit:
     if off_button.is_pressed:
-        print("Powering off!")
         senders["Main_Controller"] = False
         for sender in senders:
             if sender != "Main_Controller":
@@ -38,6 +41,9 @@ while senders["Main_Controller"] and time.time() - start_time < time_limit:
                 
 for led in leds:
     leds[led].off()
+
+ser.write(" ")
+ser.write(b"No new emails")
 
 print("LEDS turned off!")
 

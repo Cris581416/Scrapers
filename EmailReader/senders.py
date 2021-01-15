@@ -10,7 +10,7 @@ def get_course(sender: str) -> str:
                 "Ryan Williston": "SEHS",
                 "William Pace": "HOTA",
                 "Ronald Woods": "TOK",
-                "Francisco Escutia": "Spanish",
+                "Susana Valderrama": "Spanish",
                 "Jason Neves": "Math",
                 "Nikki Ahrenstorff": "English",
                 "Tomoki Kuwana": "Jap"}
