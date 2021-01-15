@@ -42,7 +42,7 @@ while senders["Main_Controller"] and time.time() - start_time < time_limit:
 for led in leds:
     leds[led].off()
 
-ser.write(" ")
+ser.write(b" ")
 ser.write(b"No new emails")
 
 print("LEDS turned off!")

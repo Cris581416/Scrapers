@@ -7,6 +7,6 @@
     "Math": 0,
     "English": 0,
     "Jap": 0,
-    "Other": 0,
-    "Main_Controller": false
+    "Other": 1,
+    "Main_Controller": true
 }
